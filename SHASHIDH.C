@@ -9,7 +9,7 @@ int credits[5];
 void main()
 {
 int i,total,m,grade,totalcredits=0;
-float cgpa 
+float cgpa;
 clrscr();
 printf("enter student name:");
 gets(s1.name);
