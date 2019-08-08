@@ -2,44 +2,47 @@
 #include<conio.h>
 struct student
 {
-int ds;
-int ld;
-int mp;
-int java;
-int coa;
+char name[20];
+int marks[5];
+int credits[5];
 }s1;
 void main()
 {
-int i=0;
-arr[6];
+int i,total,m,grade,totalcredits=0;
+float cgpa 
 clrscr();
-printf("enter the marks of DS LD MP JAVA COA");
-scanf("%d %d %d %d %d",&s1.ds,&s1.ld,&s1.mp,&s1.java,&s1.coa);
-printf("marks of DS: %d,LD: %d,MP: %d,JAVA: %d,COA: %d",s1.ds,s1.ld,s1.mp,s1.java,s1.coa);
-arr[0]=s1.ds;
-arr[1]=s1.ld;
-arr[2]=s1.mp;
-arr[3]=s1.java;
-arr[4]=s1.coa;
-for(i=0;i<6;i++)
-{if(89<arr[i]<=100)
- arr[i]=10;
- else if(79<arr[i]<90)
- arr[i]=9;
- else if(69<arr[i]<80)
- arr[i]=8;
- else if(59<arr[i]<70)
- arr[i]=7;
- else if(49<arr[i]<60)
- arr[i]=6;
- else if(39<arr[i]<50)
- arr[i]=5;
+printf("enter student name:");
+gets(s1.name);
+for(i=0;i<5;i++)
+ {
+   printf("enter the marks and credits of subject %d",i);
+   scanf("%d %d",&s1.marks[i],&s1.credits[i]);
+   totalcredits+=credits[i];
+  }
+for(i=0;i<5;i++)
+ {
+  m=s1.marks[i];
+ if(m>=90)
+ grade=10;
+ else if(m>=80)
+ grade=9;
+ else if(m>=70)
+ grade=8;
+ else if(m>=60)
+ grade=7;
+ else if(m>=50)
+ grade=6;
+ else if(m>=40)
+ grade=5;
  else
- arr[i]=0;
+ grade=0;
+ total+=grade*credits[i];
  }
- printf
-
-
-
+ for(i=0;i<5;i++)
+ {
+  printf(the student marks in subject %d is:%d",i,marks[i]);
+ }
+cgpa=(float)total/totalcredits ;
+printf("the cgpa of the student is :%f",cgpa);
 getch();
 }
