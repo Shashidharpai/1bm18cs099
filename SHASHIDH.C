@@ -10,14 +10,13 @@ void main()
 {
 int i,total,m,grade,totalcredits=0;
 float cgpa;
-clrscr();
 printf("enter student name:");
 gets(s1.name);
-for(i=0;i<5;i++)
+for(i=1;i<6;i++)
  {
    printf("enter the marks and credits of subject %d",i);
-   scanf("%d %d",&s1.marks[i],&s1.credits[i]);
-   totalcredits+=credits[i];
+   scanf("%d %d",&s1.marks[i-1],&s1.credits[i-1]);
+   
   }
 for(i=0;i<5;i++)
  {
@@ -36,7 +35,8 @@ for(i=0;i<5;i++)
  grade=5;
  else
  grade=0;
- total+=grade*credits[i];
+ total+=grade*s1.credits[i];
+ totalcredits+=s1.credits[i];
  }
  for(i=0;i<5;i++)
  {
